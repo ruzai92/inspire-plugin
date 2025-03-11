@@ -17,21 +17,21 @@ class InspireWidget extends AccountWidget implements HasActions, HasForms
 
     public function action()
     {
-        return GreeterPlugin::get()->getAction();
+        return InspirePlugin::get()->getAction();
     }
 
     public static function canView(): bool
     {
-        return GreeterPlugin::get()->isVisible();
+        return InspirePlugin::get()->isVisible();
     }
 
     public static function getSort(): int
     {
-        return GreeterPlugin::get()->getSort();
+        return InspirePlugin::get()->getSort();
     }
 
     public function getColumnSpan(): int | string | array
     {
-        return GreeterPlugin::get()->getColumnSpan();
+        return InspirePlugin::get()->getColumnSpan();
     }
 }
