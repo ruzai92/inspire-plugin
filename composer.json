@@ -1,0 +1,19 @@
+{
+    "name": "ruzai/inspire",
+    "description": "for testing plugin only.",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Ruzai\\Inspire\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "ahmad",
+            "email": "ahmad.ruzaini@ums.edu.my"
+        }
+    ],
+    "minimum-stability": "dev"
+    
+}
