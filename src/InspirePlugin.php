@@ -115,7 +115,7 @@ class InspirePlugin implements Plugin
             default => 'evening',
         };
 
-        $this->message = fn () => __('greeter::widget.' . $key);
+        $this->message = fn () => __('inspire::widget.' . $key);
 
         return $this;
     }
@@ -195,7 +195,7 @@ class InspirePlugin implements Plugin
     {
         // dd($panel);
         $panel->widgets([
-            GreeterWidget::class,
+            InspireWidget::class,
         ]);
     }
 
