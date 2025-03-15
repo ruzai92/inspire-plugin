@@ -13,7 +13,7 @@ class InspireWidget extends AccountWidget implements HasActions, HasForms
     use InteractsWithActions;
     use InteractsWithForms;
 
-    protected static string $view = 'greeter::widget';
+    protected static string $view = 'inspire::widget';
 
     public function action()
     {
