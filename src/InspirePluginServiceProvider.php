@@ -7,9 +7,9 @@ use Spatie\LaravelPackageTools\PackageServiceProvider;
 
 class InspirePluginServiceProvider extends PackageServiceProvider
 {
-    public static string $name = 'inspire';
+    public static string $name = 'inspire-widget';
 
-    public static string $viewNamespace = 'inspire';
+    public static string $viewNamespace = 'inspire-widget';
 
     public function configurePackage(Package $package): void
     {
@@ -19,6 +19,8 @@ class InspirePluginServiceProvider extends PackageServiceProvider
 
     public function packageBooted(): void
     {
-        Livewire::component('inspire-widget', InspireWidget::class);
+        if (!view()->exists('inspire-widget::widgets.inspire')) {
+            dd('View not found: inspire-widget::widgets.inspire');
+        }
     }
 }
