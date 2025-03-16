@@ -21,7 +21,7 @@
 
             <div class="flex-1">
                 <h2 class="grid flex-1 text-base font-semibold leading-6 text-gray-950 dark:text-white">
-                    {{ $message ?? __('inspire::widget.message') }}
+                    {{ $message ?? __('greeter::widget.message') }}
                     @if($plugin->shouldHaveTitle())
                         {{ $name ?? filament()->getUserName($user) }}
                     @endif

@@ -8,6 +8,13 @@
             "Ruzai\\Inspire\\": "src/"
         }
     },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Ruzai\\Inspire\\InspirePluginServiceProvider"
+            ]
+        }
+    },
     "authors": [
         {
             "name": "ahmad",

@@ -101,24 +101,24 @@ class InspirePlugin implements Plugin
         return $this;
     }
 
-    public function timeSensitive(int $morningStart = 6, int $afternoonStart = 12, int $eveningStart = 17, int $nightStart = 22): static
-    {
-        $hour = Carbon::now()->hour;
+    // public function timeSensitive(int $morningStart = 6, int $afternoonStart = 12, int $eveningStart = 17, int $nightStart = 22): static
+    // {
+    //     $hour = Carbon::now()->hour;
 
-        // Cover the extreme case of a fantasy world where night start at 0 and morning start at 1
-        $nightStart = $nightStart === 0 ? 24 : $nightStart;
+    //     // Cover the extreme case of a fantasy world where night start at 0 and morning start at 1
+    //     $nightStart = $nightStart === 0 ? 24 : $nightStart;
 
-        $key = match (true) {
-            $hour >= $nightStart || $hour < $morningStart => 'night',
-            $hour < $afternoonStart => 'morning',
-            $hour < $eveningStart => 'afternoon',
-            default => 'evening',
-        };
+    //     $key = match (true) {
+    //         $hour >= $nightStart || $hour < $morningStart => 'night',
+    //         $hour < $afternoonStart => 'morning',
+    //         $hour < $eveningStart => 'afternoon',
+    //         default => 'evening',
+    //     };
 
-        $this->message = fn () => __('inspire::widget.' . $key);
+    //     $this->message = fn () => __('inspire::widget.' . $key);
 
-        return $this;
-    }
+    //     return $this;
+    // }
 
     public function action(string | Action | Closure $action = 'logout'): static
     {
